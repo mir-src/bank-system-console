@@ -19,27 +19,19 @@ public class Menu {
             String choice = IO.readln();
             switch(choice){
                 case "1":
-                    IO.print("Enter account name: ");
+                    IO.println("Enter account name: ");
                     String nameCaseOne = IO.readln();
-                    IO.println();
 
-                    IO.print("Enter password: ");
+                    IO.println("Enter password: ");
                     String passwordCaseOne = IO.readln();
-                    IO.println();
 
-                    IO.print("Enter amount to deposit: ");
+                    IO.println("Enter amount to deposit: ");
                     int amountCaseOne = scanner.nextInt();
-                    scanner.next();
-                    IO.println();
+                    scanner.nextLine();
 
                     accounts.add(new Account(idCnt,amountCaseOne, passwordCaseOne, nameCaseOne));
                     idCnt++;
                     IO.println("Account created succesfully!");
-                    IO.println("Account created succesfully!");
-                    IO.println("Account created succesfully!");
-
-                    IO.println("Press Enter Key to continue...");
-                    IO.readln();
                     break;
                 case "7":
                     return;
