@@ -11,7 +11,13 @@ public class Account {
     }
 
     public int getAmount() {
-        return amount;
+        return this.amount;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getPassword(){
+        return this.password;
     }
     public int withdrawMoney(int amount){
         if (amount <= this.amount){

@@ -9,12 +9,11 @@ public class Menu {
         while(true){
             System.out.println("---MENU---");
             System.out.println("1. Create Account");
-            System.out.println("2. Enter Account");
-            System.out.println("3. Send Money to another Account");
-            System.out.println("4. Ask for Money");
-            System.out.println("5. Delete Account");
-            System.out.println("6. Enter another account");
-            System.out.println("7. Exit App");
+            System.out.println("2. Send Money to another Account");
+            System.out.println("3. Ask for Money");
+            System.out.println("4. Delete Account");
+            System.out.println("5. Enter another account");
+            System.out.println("6. Exit App");
 
             String choice = IO.readln();
             switch(choice){
@@ -32,6 +31,9 @@ public class Menu {
                     accounts.add(new Account(idCnt,amountCaseOne, passwordCaseOne, nameCaseOne));
                     idCnt++;
                     IO.println("Account created succesfully!");
+                    break;
+                case "2":
+
                     break;
                 case "7":
                     return;
