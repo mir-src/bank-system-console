@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -33,7 +35,31 @@ public class Menu {
                     IO.println("Account created succesfully!");
                     break;
                 case "2":
+                    String nameStartCaseTwo = IO.readln("Start Account Name: ");
+                    String nameDestinationCaseTwo = IO.readln("Second Account Name: ");
+                    int amountCaseTwo = scanner.nextInt();
+                    scanner.nextLine();
 
+                    Account itemOne = null;
+                    Account itemTwo = null;
+                    for (Account item : accounts){
+                        if (item.getName().equals(nameStartCaseTwo)){
+                            itemOne = item;
+                        }
+                    }
+                    for (Account item : accounts){
+                        if (item.getName().equals(nameDestinationCaseTwo)){
+                            itemTwo = item;
+                        }
+                    }
+                    if (itemOne != null && itemTwo != null){
+                        itemOne.transfer(itemTwo, amountCaseTwo);
+                        System.out.println("Transfered FROM: " + itemOne.getName() + " -" + amountCaseTwo);
+                        System.out.println("Transfered TO: " + itemTwo.getName() + " +" + amountCaseTwo);
+                    }
+                    else{
+                        System.out.println("One of the accounts doesn't exist");
+                    }
                     break;
                 case "7":
                     return;
